@@ -3,16 +3,56 @@ body{
 }
 button{
     padding: 25px;
-    background-color: aquamarine;
+    background-color: rgb(240, 163, 163);
     border: none;
     border-radius: 10px;
     font-size: 20px;
+    color: rgb(121, 65, 65);
     font-family:'Times New Roman', Times, serif
 }
 #post{
-    border: 2px solid brown;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     height: 300px;
     width: 60%;
-    margin: auto        ;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    background-color: rgb(224, 176, 176);
+    border-radius: 10px;
+}
+.div1{
+    height: 100px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    background-color: rgb(224, 140, 140); 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+ 
+}
+.div1 h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color:  rgb(255, 255, 255);;
+}
+
+.div2{
+    height: 150px;
+    width: 0%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    background-color: rgb(219, 158, 158); 
+}
+.div2 h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
 }
