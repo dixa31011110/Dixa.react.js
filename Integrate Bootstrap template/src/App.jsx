@@ -1,28 +1,12 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react'
+import Bootstrap from './Bootstrap'
 
-function BootstrapLayout() {
+function App() {
   return (
-
-    <Container>
-      <Row>
-
-        <Row>
-        <Col>
-          <h1>Hello Fenty</h1>
-          {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas soluta optio rerum fugit eligendi impedit laborum possimus culpa molestiae odio doloribus ut similique, inventore veniam ratione perspiciatis delectus laudantium atque!</p> */}
-          </Col>
-
-          <Col>
-             <img src="https://static.vecteezy.com/system/resources/previews/036/459/987/original/ai-generated-asian-indian-woman-business-professional-portrait-png.png" alt="" height={"500px"} width={"auto"}/> 
-            
-          </Col>
-        </Row>
-
-      </Row>
-    </Container>
-
-  );
+    <div>
+      <Bootstrap />
+    </div>
+  )
 }
 
-export default BootstrapLayout;
+export default App
