@@ -2,9 +2,7 @@ import React from 'react';
 
 const Homepage = () => {
   return (
-    // <div>
-    //   <h1>Homepage</h1>
-    // </div>
+
     <div style={{ margin: "50px" }}>
       <div style={{ textAlign: "center" }}>
         <h1 style={{ fontFamily: "fantasy", color: "teal", margin: "25px" }}>Home Page</h1>

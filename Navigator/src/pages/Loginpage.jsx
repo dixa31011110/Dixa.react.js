@@ -32,6 +32,7 @@ const Loginpage = () => {
         <input type="Submit" />
       </form>
     </div>
+    
   );
 }
 
