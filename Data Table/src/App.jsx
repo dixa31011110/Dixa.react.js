@@ -1,12 +1,15 @@
 
+import AllRoutes from './AllRoutes'
 import './App.css'
-import Homepage from './Homepage'
+
 
 function App() {
   
   return (
     <>
-      <Homepage />
+      <AllRoutes />
+      
+
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
     const [productData, setproductData] = useState([])
@@ -7,6 +8,17 @@ const Homepage = () => {
     const [sort, setsort] = useState(null)
     const [page, setpage] = useState(1)
     const[search,setsearch]= useState("")
+    const[totaldata,settotaldata]=useState(0)
+    // const Fetchproduct = () => {
+    //     axios
+    //     .get("http://localhost:3000/product")
+    //     .then((res)=>{
+    //         settotaldata(res.headers[`x-total-count`])
+    //         setproductData(res.data)
+    //     })
+    //     .catch((err)=>console.log(err));
+    // };
+    
 
     const Fetchproduct = () => {
         axios
@@ -19,46 +31,35 @@ const Homepage = () => {
                     _page:page,
                     q:search
                 }
-            }).then((res) => setproductData(res.data))
+            })
+            .then((res) => setproductData(res.data))
             .catch((err) => console.log(err))
     }
     useEffect(() => {
         Fetchproduct()
-    }, [filter, sort, page, search])
+    }, [productData,filter,sort,page,search])
+      useEffect(() => {
+        Fetchproduct()
+    }, []);
+
+    const handleClick=(id)=>{
+        axios.delete(`http://localhost:3000/product/${id}`).then((res)=>alert("deleted"))
+        .catch((err)=>console.log(err))
+    }
+
     return (
         <div>
             <h1>Home Page</h1>
-
-
+            <div style={{display:"flex", justifyContent:"space-around"}}>
+            <Link to={"/PostForm"}>PostForm</Link>
+            <Link to={"/patch"}>Update price</Link>
+            </div>
             <input type="text" onChange={(e)=>setsearch(e.target.value)} placeholder='search' />
-
-
-
-
-
-
-
-
             <button disabled={page==1} onClick={()=>setpage(page-1)}>Prev</button>
             <button disabled>{page}</button>
             <button disabled={page==4} onClick={()=>setpage(page+1)}>next</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* Sort and Filter */}
+                                        
+                                         {/* Sort and Filter */}
 
             <div style={{ display: "flex", justifyContent: "space-around" }}>
                 <select name="" id="" onChange={(e) => setfilter(e.target.value)}>
@@ -86,6 +87,7 @@ const Homepage = () => {
                         <h3>{el.title}</h3>
                         <p>{el.price}</p>
                         <p>{el.category}</p>
+                        <button onClick={()=>handleClick(el.id)}>delete</button>
                     </div>
                 ))}
             </div>
