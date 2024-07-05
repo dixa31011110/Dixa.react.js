@@ -1,8 +1,9 @@
-// src/counterReducer.js
-import { ADD, REDUCE } from './action';
+// counterReducer.js
+
+import { ADD, REDUCE } from "./action";
 
 const initialState = {
-  counter: 0,
+  count: 0,
 };
 
 const counterReducer = (state = initialState, action) => {
@@ -10,12 +11,12 @@ const counterReducer = (state = initialState, action) => {
     case ADD:
       return {
         ...state,
-        counter: state.counter + action.payload,
+        count: state.count + action.payload,
       };
     case REDUCE:
       return {
         ...state,
-        counter: state.counter - action.payload,
+        count: state.count - action.payload,
       };
     default:
       return state;

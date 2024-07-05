@@ -1,8 +1,9 @@
-// src/themeReducer.js
-import { SWITCH_THEME } from './action';
+// themeReducer.js
+
+import { SWITCH_THEME } from "./action";
 
 const initialState = {
-  theme: 'light',
+  theme: "light",
 };
 
 const themeReducer = (state = initialState, action) => {

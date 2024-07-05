@@ -1,7 +1,10 @@
-// src/components/CounterButtons.jsx
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { handleAdd, handleReduce } from '../action';
+// CounterButtons.jsx
+
+import React from "react";
+// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+// import { handleAdd, handleReduce } from "./action";
+import { handleAdd,handleReduce } from "../action";
 
 const CounterButtons = () => {
   const dispatch = useDispatch();
