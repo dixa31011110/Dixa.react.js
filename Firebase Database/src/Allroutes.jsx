@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
-import Navbar from './components/Navbar';
 import Privateroutes from './components/Privateroutes';
 
 const Allroutes = () => {

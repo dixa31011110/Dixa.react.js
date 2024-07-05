@@ -7,7 +7,7 @@ const Privateroutes = ({children}) => {
 
   const [user] = useAuthState(auth);
     if(!user){
-        return<Navigate to={"/login"} />
+        return <Navigate to={"/login"} />
     }
   return children
    

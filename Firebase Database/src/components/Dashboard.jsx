@@ -11,7 +11,7 @@ const Dashboard = () => {
     }
     useEffect(()=>{
         fetchdata()
-    })
+    },[])
   return (
     <div>
       <h1>Product</h1>
