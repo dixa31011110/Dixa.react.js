@@ -1,16 +1,11 @@
-// Counter.jsx
 
-import React from "react";
-import CounterValue from "./CounterValue";
-import CounterButtons from "./CounterButtons";
-import { useSelector } from "react-redux";
+import React from 'react';
+import CounterValue from './CounterValue';
+import CounterButtons from './CounterButtons';
 
 const Counter = () => {
-  const theme = useSelector((state) => state.theme.theme);
-  const themeClass = theme === "light" ? "light_theme" : "dark_theme";
-
   return (
-    <div className={`counter ${themeClass}`}>
+    <div>
       <CounterValue />
       <CounterButtons />
     </div>

@@ -1,18 +1,15 @@
-// index.js or App.js
 
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import store from "./store";
-import Counter from "./components/Counter";
-import Theme from "./components/Theme";
-import "./App.css"; // Make sure to import your styles
+import React from 'react';
+import Counter from './components/Counter';
+import Theme from './components/Theme';
 
-const App = () => (
-  <Provider store={store}>
-    <Theme />
-    <Counter />
-  </Provider>
-);
+const App = () => {
+  return (
+    <div>
+      <Theme />
+      <Counter />
+    </div>
+  );
+};
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
